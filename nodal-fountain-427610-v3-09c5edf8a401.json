@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "nodal-fountain-427610-v3",
+  "private_key_id": "09c5edf8a4014aadf0b57d6cf70a886cc50eae9f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDLnkN2038tA2LR\nxR2Ux/1Y7jKGWG2v+jzRwfflFubK1eynmOLTBcS4RfK6lZNwoZM2plhgB+2yPM7V\nSaHqbEsGG3Z/zDSrByM3MfHRKeudpLYcTBIp8xMRIaguUEMbKUaskv8Tkx4x7V8i\nFuJxhk3j7T+seq9Mm/4G2G5xeMFJ/i552O+v0JHgy5BNEZCxEx5too4a1QZVDEaR\nUYa1+x4qMJNMj1ZWRAJcFDg+LriW3LicSFaUZDq16NHWTM94Dgg4g0pecSZBCQbR\nMDID3uuWgfrPLRm49xgSNXJrsy+x55SSM6EeABvFIQ6qU09zUx14oWjR2GktinPk\ni3cwRXknAgMBAAECggEALYKaIZzz9+Oh2rDsA60PeykCMfThz0tm/JsWBSYxP3TB\nCFSrne7UITvBHOMBqVLzzGsxpYUgI45jzFhA0FyUCDFrMvU5cGCQBm4rVkzAVOPT\nsE9wX9/siw+yv2dBGHkJStkwGffv78jWUpA63JTgI+mLKcniFIVpKa6GQOZ0jUzU\najlFcLpZETvVqh0lP6xwHv4RiS1IJbXfA8eFukfDHlK+vOobPhNvK9lcq/LG9cLI\nTw3xG4AhJu+uFY1YRI3v/+K9A0uZEzvPnwx6FQGu3C/Sesi7ylkw6VP736HtMHaa\nAugOgrebd8yeeC2hjH1KYu39IRDtQ8THypqOSSEgwQKBgQDyFNtEjsQ2SLXYZkLR\nuLAYwYQ5uaRY/Uh6NGyF2x2WN/m1vLd7GxB/n2LXDQJOJEE33QzA7zfvAZ5bieVx\nrcUFgQ8k4g2ewqXUd2sODjCK9mAv97jHQJnArxUQy0xTBFqA8wBpcX0MHmUpKztv\n70QQkQcatD8/qQ2F3DVMsSjBZQKBgQDXU0ZgtoNyvZv1mHZk/EWqLH/pJ79DuxFQ\nCgKeHVIuf5qavJGqtmaXTWQxbC9NE8hqw5j6SUsdBcm+xUiBaN2xhcWSk07Cp9Oy\ngqn/KaBUFFc5h2yoQyXq/LJlemknk56Cm6snRGIYv+YmkOr2aIkgwSWy8DFPL3H2\nStjgeGlNmwKBgQCwqBmuuQRknMDe7xkZ1E3lcuqb+WX+bq8CRtlfARxhL+3w+otm\nscRjbZuCVYL2JSzWqGATNz65EpRONp4SS/2324uCndfUoDTFjHO6KQ6xicN9nafg\n97p7ywhzXfgPqOCmsy38xI29Vzz5Qww3zgH8mOj3SsvRF/u/UIgwtCOKpQKBgQDV\nF1NpuJWjgqOKTIS2cbYbsAgx3CT7SXDbrdxjT48Z9ywwf/cEY5hpmaxTAMZa1/4a\nMlH9N3V/VlAOXDzh3L6wxTr+UIu8NcxaN9c2bqJ9MtgTVcMhTbqDr+p4ZMkV4pAW\nnymlJZaS+a4xcm8kxdUXNi4xxGR4AfMdE3tHwcIsiwKBgQDJZx+39qEAPCKl7Ycc\nPT8a6/GUOJtpN12QrtDLTE7ch1oIJDwIzO87nJBTerkqPCuYS5DSYb41+mis4gXM\nz1GSURjmXugmoX3n980NuN0wG0o8xO0cJ/ymB85aL4AU7IZe2Fx2PoAf9aeRbdoG\nt0xh4AEGz1zBIRXrDbvyAS17GQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "eric-239@nodal-fountain-427610-v3.iam.gserviceaccount.com",
+  "client_id": "114592202663704490656",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/eric-239%40nodal-fountain-427610-v3.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

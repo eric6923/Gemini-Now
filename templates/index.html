@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera To Gemini</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #camera {
+            display: none;
+        }
+        .button-container {
+            margin-bottom: 20px;
+        }
+        .result-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #chatResponse {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Camera To Gemini</h1>
+    
+    <!-- Camera Input and Capture Button -->
+    <div class="button-container">
+        <video id="camera" width="320" height="240" autoplay></video>
+        <button id="startCamera">Start Camera</button>
+        <button id="capture" style="display: none;">Capture Image</button>
+    </div>
+    
+    <!-- Display Chatbot Response -->
+    <div class="result-container">
+        <h2>Chatbot Response:</h2>
+        <div id="chatResponse">Waiting for response...</div>
+    </div>
+
+    <script>
+        const startCameraButton = document.getElementById('startCamera');
+        const captureButton = document.getElementById('capture');
+        const camera = document.getElementById('camera');
+        const chatResponseDiv = document.getElementById('chatResponse');
+
+        let stream;
+
+        startCameraButton.addEventListener('click', async () => {
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                camera.srcObject = stream;
+                camera.style.display = 'block';
+                startCameraButton.style.display = 'none';
+                captureButton.style.display = 'inline';
+            } catch (err) {
+                console.error('Error accessing the camera', err);
+            }
+        });
+
+        captureButton.addEventListener('click', async () => {
+            const snapshot = document.createElement('canvas');
+            snapshot.width = camera.videoWidth;
+            snapshot.height = camera.videoHeight;
+            const context = snapshot.getContext('2d');
+            context.drawImage(camera, 0, 0, snapshot.width, snapshot.height);
+
+            const imageBlob = await new Promise(resolve => snapshot.toBlob(resolve));
+            const formData = new FormData();
+            formData.append('image', imageBlob, 'captured-image.png');
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    chatResponseDiv.textContent = data.response || 'No response from chatbot';
+                } else {
+                    chatResponseDiv.textContent = 'Error with image upload';
+                }
+            } catch (error) {
+                chatResponseDiv.textContent = 'Error: ' + error.message;
+            }
+
+            // Clean up
+            stream.getTracks().forEach(track => track.stop());
+            camera.style.display = 'none';
+            startCameraButton.style.display = 'inline';
+            captureButton.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
